@@ -20,7 +20,7 @@ public class DeliveryCardTest {
     @Test
     void openDeliveryCardTest() {
         open("http://localhost:9999/");
-        $(byText("Карта с доставкой!"));
+//        $(byText("Карта с доставкой!"));
         $("[data-test-id=city] input").setValue("Че");
         SelenideElement el = $$(".popup__container").last();
         el.$$(".menu-item__control").find(exactText("Челябинск")).click();
