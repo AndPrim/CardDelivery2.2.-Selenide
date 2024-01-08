@@ -1,0 +1,1 @@
+[![Java CI with Gradle](https://github.com/AndPrim/CardDelivery2.2.-Selenide/actions/workflows/gradle.yml/badge.svg)](https://github.com/AndPrim/CardDelivery2.2.-Selenide/actions/workflows/gradle.yml)
