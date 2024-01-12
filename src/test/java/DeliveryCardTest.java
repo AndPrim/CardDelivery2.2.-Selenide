@@ -41,11 +41,11 @@ public class DeliveryCardTest {
         $("[data-test-id=city] input").setValue("Че");
         $$(".menu-item__control").find(exactText("Челябинск")).click();
         String dateNew = dateGenerate(7, "dd.MM.yyyy");
-        $("[data-test-id='date'] button").click();
+        $("[data-test-id='date']").click();
         if(!dateGenerate(3, "MM").equals(dateGenerate(7, "MM"))){
         $("[data-step='1']").click();
         }
-        $$(".calendar__day").find(exactText(dateGenerate(7,"dd"))).click();
+        $$(".calendar__day").find(exactText(dateGenerate(7,"d"))).click();
         $("[data-test-id='name'] input").setValue("Ступин Иван");
         $("[data-test-id='phone'] input").setValue("+79998887766");
         $("[data-test-id='agreement']").click();
@@ -59,16 +59,16 @@ public class DeliveryCardTest {
     }
 
     @Test
-    void openDeliveryCardTestCalendarFall() {
+    void openDeliveryCardTestCalendarNextMonth() {
         open("http://localhost:9999/");
         $("[data-test-id=city] input").setValue("Че");
         $$(".menu-item__control").find(exactText("Челябинск")).click();
-        String dateNew = dateGenerate(22, "dd.MM.yyyy");
-        $("[data-test-id='date'] button").click();
-        if(!dateGenerate(3, "MM").equals(dateGenerate(22, "MM"))){
+        String dateNew = dateGenerate(21, "dd.MM.yyyy");
+        $("[data-test-id='date']").click();
+        if(!dateGenerate(3, "MM").equals(dateGenerate(21, "MM"))){
             $("[data-step='1']").click();
         }
-        $$(".calendar__day").find(exactText(dateGenerate(22,"dd"))).click();
+        $$(".calendar__day").find(exactText(dateGenerate(21,"d"))).click();
         $("[data-test-id='name'] input").setValue("Ступин Иван");
         $("[data-test-id='phone'] input").setValue("+79998887766");
         $("[data-test-id='agreement']").click();
